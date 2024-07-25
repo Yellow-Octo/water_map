@@ -4,7 +4,7 @@ set -e
 start_time=$(date +%s)
 
 # Set the batch size
-BATCH_SIZE=100
+BATCH_SIZE=200
 
 # Set table to UNLOGGED, import data, then set back to LOGGED
 psql -U $POSTGRES_USER -d $POSTGRES_DB <<-EOSQL

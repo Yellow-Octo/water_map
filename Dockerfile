@@ -27,5 +27,6 @@ COPY toCopy/postgresql.conf /etc/postgresql/postgresql.conf
 ENV POSTGRES_CONFIG_FILE=/etc/postgresql/postgresql.conf
 
 WORKDIR /data
-#RUN unzip -j water-polygons-split-4326.zip -d /data
-#RUN rm water-polygons-split-4326.zip
+RUN curl -fSL -o water-polygons-split-4326.zip https://github.com/Yellow-Octo/water_map/releases/download/yes/water-polygons-split-4326.zip
+RUN unzip -j water-polygons-split-4326.zip -d /data
+RUN rm water-polygons-split-4326.zip
