@@ -22,6 +22,9 @@ RUN ln -sf /bin/bash /bin/sh
 
 
 COPY container /
+# Copy a custom postgresql.conf file
+COPY toCopy/postgresql.conf /etc/postgresql/postgresql.conf
+ENV POSTGRES_CONFIG_FILE=/etc/postgresql/postgresql.conf
 
 WORKDIR /data
 #RUN unzip -j water-polygons-split-4326.zip -d /data
