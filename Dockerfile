@@ -21,7 +21,7 @@ RUN echo 'source /usr/share/bash-completion/bash_completion' >> /etc/bash.bashrc
 RUN ln -sf /bin/bash /bin/sh
 
 
-COPY . /
+COPY container /
 
 WORKDIR /data
 #RUN unzip -j water-polygons-split-4326.zip -d /data
